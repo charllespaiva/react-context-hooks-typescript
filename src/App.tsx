@@ -3,12 +3,18 @@ import { MusicPlayerProvider } from './context/MusicPlayerContext';
 import TrackList from './components/TrackList';
 import PlayerControls from './components/PlayerControls';
 
+import GlobalStyle, { AppContainer } from './styles/global';
+
 const App = () => (
   <MusicPlayerProvider>
-    <div className="App">
+    <GlobalStyle />
+   
+    <AppContainer>
       <TrackList />
       <PlayerControls />
-    </div>
+    </AppContainer>
+
+    
   </MusicPlayerProvider>
 );
 
